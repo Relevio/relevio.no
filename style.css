@@ -3,7 +3,337 @@
   padding: 0;
 }
 
+html {
+  --green-900: #0a1a0a;
+  --green-800: #14321c;
+  --green-700: #1b4c2d;
+  --green-600: #22693f;
+  --green-500: #288651;
+  --green-400: #6caa81;
+  --green-300: #a7ceb4;
+  --green-200: #e3f2e9;
+  --green-100: #f5fef9;
+
+  --brown-900: #1f1e14;
+  --brown-800: #343325;
+  --brown-700: #4a4937;
+  --brown-600: #616049;
+  --brown-500: #79785d;
+  --brown-400: #a09e8a;
+  --brown-300: #c8c6b9;
+  --brown-200: #f1f0ea;
+  --brown-100: #fbfbf8;
+
+  --blue-900: #0d1c26;
+  --blue-800: #163246;
+  --blue-700: #1e4969;
+  --blue-600: #25618d;
+  --blue-500: #2c7bb4;
+  --blue-400: #7aa2cb;
+  --blue-300: #b7cbe1;
+  --blue-200: #e6edf5;
+  --blue-100: #f7fafc;
+
+  --red-900: #280b0b;
+  --red-800: #4a1b1d;
+  --red-700: #712b2d;
+  --red-600: #993d3d;
+  --red-500: #c44f4f;
+  --red-400: #db837e;
+  --red-300: #edb5b0;
+  --red-200: #fae7e5;
+  --red-100: #fdf6f6;
+
+}
+
 body {
-  font-family: 'Lato', sans-serif;
+  background-color: white;
+  color: var(--brown-700);
+  font-family: "Lato", sans-serif;
+  font-size: 1.125rem;
   font-weight: 400;
+  line-height: 2rem;
+}
+
+
+@media (max-width: 35em) {
+  body {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+a {
+  color: var(--blue-600);
+  text-underline-offset: 0.25rem;
+}
+
+a:hover {
+  color: var(--blue-800);
+}
+
+main {
+
+}
+
+section {
+  margin-bottom: 9rem;
+}
+
+@media (max-width: 72em) {
+  section {
+    margin-bottom: 4.5rem;
+  }
+}
+
+
+section > :last-child {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-family: "Satisfy", "Lato", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+}
+
+h1 span {
+  color: var(--green-500);
+  font-size: 3rem;
+  margin: 0 0.25rem;
+}
+
+h2 {
+  color: var(--green-500);
+  font-family: "Satisfy", "Lato", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+
+@media (max-width: 35em) {
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  h1 span {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+ul {
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.column-grid {
+  display: grid;
+  grid-template-columns: 1fr 31.5rem 4.5rem 27rem 1fr;
+}
+
+@media (max-width: 72em) {
+  .column-grid {
+    display: block;
+    padding: 0 2rem;
+  }
+}
+
+.introduksjon {
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  padding-top: 9rem;
+}
+
+
+@media (max-width: 72em) {
+  .introduksjon {
+    padding-top: 4.5rem;
+  }
+  
+}
+
+@media (max-width: 35em) {
+  .introduksjon {
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+}
+
+
+.introduksjon > * {
+  grid-column: 2 / span 3;
+}
+
+.venterommet {
+  align-items: center;
+  background-color: var(--green-100);
+}
+
+.venterommet__leftcolumn {
+  padding: 4.5rem 0;
+}
+
+.venterommet__leftcolumn > :last-child {
+  margin-bottom: 0;
+}
+
+
+.venterommet__rightcolumn {
+  grid-column: 3 / span 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  height: 100%;
+  background-image: url("circle.svg");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: 9rem center;
+}
+
+.venterommet__pris {
+  text-align: center;
+  font-size: 16px;
+}
+
+.venterommet__pris-header{
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.venterommet__pris-innhold {}
+.venterommet__pris-kr {
+  
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+
+}
+.venterommet__pris-mva {
+  font-size: 0.875rem;
+  color: var(--brown-600);
+}
+.venterommet__pris-gratis {
+  margin-bottom: 0;
+}
+
+
+.venterommet__screenshot1 {
+  display: block;
+  border: thin solid var(--brown-700);
+  margin: 0 auto;
+  max-width: 100%; 
+  height: auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 72em) {
+
+  .venterommet__leftcolumn {
+    padding: 2rem 0;
+  }
+
+  .venterommet__rightcolumn {
+    margin: 0 -2rem;
+    padding: 2rem 0;
+  }
+  
+}
+
+
+
+.omoss__rightcolumn {
+  grid-column: 3 / span 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  height: 100%;
+}
+
+
+.omoss__finntormagne {
+  clip-path: url(#twocircles);
+  display: block;
+  margin: 3.5rem auto 0 auto;
+  max-width: 100%; 
+  height: auto;
+}
+
+
+@media (max-width: 35em) {
+  .omoss__finntormagne {
+    clip-path: none;
+  }
+
+  .omoss__rightcolumn {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+}
+
+
+
+
+.veienvidere > * {
+  grid-column: 2 / span 1;
+}
+
+.veienvidere__action {
+  background-color: var(--blue-500);
+  color: white;
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  border-radius: 1.75rem;
+}
+
+.veienvidere__action:hover {
+  color: white;
+  background-color: var(--blue-600);
+}
+
+.samarbeidspartnere > * {
+  grid-column: 2 / span 1;
 }
