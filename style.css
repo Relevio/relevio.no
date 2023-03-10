@@ -175,8 +175,6 @@ li {
 }
 
 .introduksjon {
-  font-size: 1.25rem;
-  line-height: 2.5rem;
   padding-top: 9rem;
 }
 
@@ -186,13 +184,6 @@ li {
     padding-top: 4.5rem;
   }
   
-}
-
-@media (max-width: 35em) {
-  .introduksjon {
-    font-size: 1.125rem;
-    line-height: 2rem;
-  }
 }
 
 
@@ -274,6 +265,8 @@ li {
   .venterommet__rightcolumn {
     margin: 0 -2rem;
     padding: 2rem 0;
+    background-size: auto 200%;
+    background-position: top center;
   }
   
 }
@@ -291,11 +284,12 @@ li {
 
 
 .omoss__finntormagne {
-  clip-path: url(#twocircles);
+  /* clip-path: url(#twocircles); */
   display: block;
   margin: 3.5rem auto 0 auto;
   max-width: 100%; 
   height: auto;
+  border-radius: 9rem;
 }
 
 
