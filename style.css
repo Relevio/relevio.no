@@ -44,6 +44,7 @@ html {
   --red-200: #fae7e5;
   --red-100: #fdf6f6;
 
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -174,14 +175,55 @@ li {
   }
 }
 
+
+.meny {
+  position: sticky;
+  top: 0;
+  background: var(--brown-100);
+}
+
+.meny > * {
+  grid-column: 2 / span 3;
+}
+
+.meny__list {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.meny__listitem {
+  margin: 0;
+}
+
+.meny__link {
+  margin: 0;
+  color: var(--brown-800);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+
+@media (max-width: 72em) {
+  .meny__list {
+    padding: 0.5rem 0;
+    gap: 0.5rem 1rem;
+  }
+  
+}
+
+
 .introduksjon {
-  padding-top: 9rem;
+  padding-top: 5rem;
 }
 
 
 @media (max-width: 72em) {
   .introduksjon {
-    padding-top: 4.5rem;
+    padding-top: 3rem;
   }
   
 }
@@ -272,6 +314,45 @@ li {
 }
 
 
+.plattformen {
+  display: grid;
+  grid-template-columns: 1fr 45rem 18rem 1fr;
+}
+
+
+.plattformen > * {
+  grid-column: 2 / span 1;
+}
+
+.plattformen__img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 4rem;
+}
+
+.plattformen__features-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+} 
+
+.plattformen__features-listitem {
+  background-color: var(--green-200);
+  color: var(--green-700);
+  padding: 1rem 2rem;
+  margin-bottom: 0;
+} 
+
+@media (max-width: 72em) {
+  .plattformen {
+    display: block;
+    padding: 0 2rem;
+  }
+}
+
 
 .omoss__rightcolumn {
   grid-column: 3 / span 3;
@@ -296,6 +377,7 @@ li {
 @media (max-width: 35em) {
   .omoss__finntormagne {
     clip-path: none;
+    border-radius: 0;
   }
 
   .omoss__rightcolumn {
@@ -330,4 +412,12 @@ li {
 
 .samarbeidspartnere > * {
   grid-column: 2 / span 1;
+}
+
+.samarbeidspartnere__liste {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;;
+  padding: 0;
+  gap: 1.5rem;
 }
